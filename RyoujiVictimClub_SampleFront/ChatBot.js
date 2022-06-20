@@ -1,5 +1,5 @@
 const FirstChatBot = [
-    'できないとか許さないからね！'
+    '良治被害者の会へようこそ！精神的に甚大なダメージを受ける可能性があるため、精神科医の指導の元、当チャットボットをご利用ください。'
 ];
 
 const RyoujiChatBot = [
@@ -40,6 +40,18 @@ const RandomRyoujiChatBot = [
     ['はやくやれよ'],
     ['それでいいの？いいわけ無いでしょ？'],
     ['それはあなたがわかろうとする努力をしていないからでしょ？']]
+]
+
+const today = new Date();
+const RyoujiYohouChatBot = [
+    [[today + '：は良治不機嫌の為、家に帰れるのは23時頃の予報です。お気を付けください。'],
+    [today + '：は良治超不機嫌の為、家に帰れるのは明日の23時頃の予報です。頑張ってください。'],
+    [today + '：は良治機嫌が良いので、定時に終われるでしょう。安心して仕事をしてください。'],
+    [today + '：は良治超機嫌が良いので、定時前に終われるだけではなく、昼ごはんも奢ってくれるでしょう！'],
+    [today + '：は良治機嫌普通の為、定時では終われませんが何事もなく平穏に過ごせる一日になるでしょう。'],
+    [today + '：は良治機嫌微妙の為、小言を言われることはありますが、気にせず自分の仕事に集中しましょう。'],
+    [today + '：は良治不機嫌よりの微妙の為、朝会で詰められるでしょう。ラッキーアイテムはゲロ袋です。'],
+    [today + '：は良治超不機嫌よりの不機嫌の為、怒鳴られるでしょう。ラッキーアイテムは労働基準監督署の電話番号です。']]
 ]
 
 let chatCount = 0;
@@ -167,6 +179,38 @@ function btnFunc() {
             setTimeout(()=> {
                 output(RyoujiChatBot[0], 'robot');
             }, 20)
+        break;
+
+        //自信を崩壊させる良治シリーズ
+        case "私出来ます。":
+            setTimeout(()=> {
+                output(RyoujiChatBot[5], 'robot');
+            }, 20)
+        break;
+
+        case "プロダクションコードを見てください":
+            setTimeout(()=> {
+                output(RyoujiChatBot[2], 'robot');
+            }, 20)
+        break;
+
+        case "調査しておきます":
+            setTimeout(()=> {
+                output(RyoujiChatBot[11], 'robot');
+            }, 20)
+        break;
+
+        case "できました":
+            setTimeout(()=> {
+                output(RyoujiChatBot[10], 'robot');
+            }, 20)
+        break;
+
+        //良治予報シリーズ
+        case "今日の良治予報は？":
+            setTimeout(()=> {
+                output(RyoujiYohouChatBot[0][Math.floor(Math.random() * RyoujiYohouChatBot[0].length)], 'robot');
+            })
         break;
 
         default:
