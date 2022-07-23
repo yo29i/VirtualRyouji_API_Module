@@ -16,5 +16,15 @@ public class RequestBodyEntity {
 	public String gettext() {
 		return this.text;
 	}
+	@HeaderParam("text")
+	private String text;
+	
+	public void settext(String text) {
+		this.text = text;
+	}
+	
+	public String gettext() {
+		return this.text;
+	}
 
 }
