@@ -16,4 +16,5 @@ public class RequestBodyEntity {
 	public String gettext() {
 		return this.text;
 	}
+	test
 }
